@@ -460,6 +460,46 @@
       .hero-stats { gap: 20px; flex-wrap: wrap; }
       .about-numbers { gap: 24px; flex-wrap: wrap; }
     }
+
+    /* -- VIDEO TESTIMONIALS -- */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 52px;
+    }
+    .video-card {
+      background: var(--dark3);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .video-card:hover {
+      border-color: rgba(212,175,55,0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+    .video-wrap {
+      position: relative;
+      padding-bottom: 177.78%; /* 9:16 vertical */
+      height: 0;
+      overflow: hidden;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    @media (max-width: 900px) {
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .video-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    }
+
   </style>
 </head>
 <body>
@@ -550,7 +590,7 @@
           <div class="who-text">You're tired of capped income and being told what you're worth</div>
         </div>
         <div class="who-item">
-          <div class="who-check">&#10003;</div>
+          <div class;"who-check">&#10003;</div>
           <div class="who-text">You can handle rejection and keep moving &mdash; every closer can</div>
         </div>
         <div class="who-item">
@@ -601,13 +641,27 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+<!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="container">
       <div class="section-label">Rep Stories</div>
       <h2 class="section-title">Real People. Real Results.</h2>
-      <p class="section-sub">These are people who showed up, put in the work, and changed their lives.</p>
-      <div class="testi-grid">
+      <p class="section-sub">These are people who showed up, put in the work, and changed their lives. Watch them tell you in their own words.</p>
+
+      <!-- VIDEO TESTIMONIALS -->
+      <div class="video-grid">
+        <div class="video-card"><div class="video-wrap"><iframe src="https://drive.google.com/file/d/1eh7CRiumDyksJrxZtFcLK6JVwLB27RR4/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe></div></div>
+        <div class="video-card"><div class="video-wrap"><iframe src="https://drive.google.com/file/d/18UaSdJwdESVQ3X08DUZatYm9VMW5FREc/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe></div></div>
+        <div class="video-card"><div class="video-wrap"><iframe src="https://drive.google.com/file/d/1_CGR3wTl8L51rW2DvIh4FtIDhzA2bTh_/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe></div></div>
+        <div class="video-card"><div class="video-wrap"><iframe src="https://drive.google.com/file/d/1XnhYu-f-3oYQPyisNryeY_soAH8eJ0sH/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe></div></div>
+        <div class="video-card"><div class="video-wrap"><iframe src="https://drive.google.com/file/d/18oDiAc1VoU64jWBWwPc0pBVqyQF-WXBC/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe></div></div>
+        <div class="video-card"><div class="video-wrap"><iframe src="https://drive.google.com/file/d/1LBG1OIDzJTpPPuzhzu83ZrWJOvQ7tb83/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe></div></div>
+        <div class="video-card"><div class="video-wrap"><iframe src="https://drive.google.com/file/d/1b-ytt0jM6_21_8YKWY3-LbgnhBtj7_xN/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe></div></div>
+        <div class="video-card"><div class="video-wrap"><iframe src="https://drive.google.com/file/d/1wggUN1550qqzY3BjmvtlRA4WxvVpWWR3/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+
+      <!-- TEXT TESTIMONIALS -->
+      <div class="testi-grid" style="margin-top: 56px;">
         <div class="testi-card">
           <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <div class="testi-quote">"I had zero sales experience. Made $6,200 my first month. Derek coaches you every single day. Best decision I ever made."</div>
